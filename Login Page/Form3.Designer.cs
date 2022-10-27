@@ -44,7 +44,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 67);
+            this.label1.Location = new System.Drawing.Point(211, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(609, 64);
             this.label1.TabIndex = 0;
@@ -111,9 +111,9 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(50)))), ((int)(((byte)(75)))));
-            this.label5.Location = new System.Drawing.Point(52, 151);
+            this.label5.Location = new System.Drawing.Point(52, 143);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(908, 23);
+            this.label5.Size = new System.Drawing.Size(908, 31);
             this.label5.TabIndex = 9;
             // 
             // button1
@@ -135,7 +135,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(50)))), ((int)(((byte)(75)))));
             this.label6.Location = new System.Drawing.Point(55, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(893, 24);
+            this.label6.Size = new System.Drawing.Size(905, 36);
             this.label6.TabIndex = 20;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
@@ -146,8 +146,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1016, 592);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

@@ -39,8 +39,18 @@ namespace Login_Page
                 }
                 else
                 {
-                    MessageBox.Show("We sended password reset link to your mail.Click link and reset your password.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (textBoxEmail.Text.Contains("@")&& textBoxEmail.Text.Contains("."))
+                        {
+                        MessageBox.Show("We sended password reset link to your mail.Click link and reset your password.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(" Enter valid Email!!!", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
+
+
             }
             catch
             {

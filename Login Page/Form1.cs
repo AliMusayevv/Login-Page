@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Login_Page
 {
@@ -51,11 +52,6 @@ namespace Login_Page
         char? none = null;
        
 
-        
-
-        
-
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -75,44 +71,46 @@ namespace Login_Page
             try
             {
 
-
-                if (textBoxUsername.Text == DefaultAcc.username && textBoxPassword.Text == DefaultAcc.password)
                 {
 
-                    Form5 form5 = new Form5();
-                    form5.Show();
-                    this.Hide();
 
 
 
+                    if (textBoxUsername.Text == DefaultAcc.username && textBoxPassword.Text == DefaultAcc.password)
+                    {
 
-                }
+                        Form5 form5 = new Form5();
+                        form5.Show();
+                        this.Hide();
 
-
-                else if ((textBoxUsername.Text == "Username" && textBoxPassword.Text == "Password"))
-                {
-                    MessageBox.Show("Enter username and Password", "Notification !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-                else if (textBoxUsername.Text == DefaultAcc.username && textBoxPassword.Text != DefaultAcc.password)
-                {
-
-                    MessageBox.Show("Password is incorrect!", "Notification !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-                else if (textBoxUsername.Text != DefaultAcc.username && textBoxPassword.Text == DefaultAcc.password)
-                {
-
-                    MessageBox.Show("Username is incorrect!", "Notification !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
+                    }
 
 
+                    else if ((textBoxUsername.Text == "Username" && textBoxPassword.Text == "Password"))
+                    {
+                        MessageBox.Show("Enter username and Password", "Notification !", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                else
+                    }
+                    else if (textBoxUsername.Text == DefaultAcc.username && textBoxPassword.Text != DefaultAcc.password)
+                    {
 
-                {
-                    MessageBox.Show("Entered information is incorrect!", "Notification !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Password is incorrect!", "Notification !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else if (textBoxUsername.Text != DefaultAcc.username && textBoxPassword.Text == DefaultAcc.password)
+                    {
+
+                        MessageBox.Show("Username is incorrect!", "Notification !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+
+
+
+                    else
+
+                    {
+                        MessageBox.Show("Entered information is incorrect!", "Notification !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch
@@ -208,11 +206,26 @@ namespace Login_Page
                 if (checkBoxShowPassword.Checked)
                 {
                     textBoxPassword.PasswordChar = '\0';
+
+                    
                 }
                 else
                 {
+                    
                     textBoxPassword.PasswordChar = '*';
                 }
+
+
+                if (checkBoxShowPassword.Checked == false)
+                {
+                    if (textBoxPassword.Text == "Password")
+                    {
+                        textBoxPassword.PasswordChar = '\0';
+
+                    }
+                }
+
+
             }
             catch
             {

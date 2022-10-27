@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -134,11 +135,16 @@ namespace Login_Page
                 textBoxRepassword.PasswordChar = '*';
             }
         }
-
+       
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
+
+            
             try
             {
+                
+
+
 
 
 
@@ -160,6 +166,10 @@ namespace Login_Page
                     DefaultAcc.password = textBoxPassword.Text;
 
                     MessageBox.Show("Registration is complete", "Notification !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Form5 form5 = new Form5();
+                    form5.Show();
+                    this.Hide();
                 }
             }
 
